@@ -1,0 +1,45 @@
+git init
+touch a.txt
+touch b.txt
+start a.txt
+start b.txt
+git add .
+git commit -m "Two files created and edited."
+start a.txt
+git add .
+git reset
+git checkout a.txt
+start a.txt
+git add .
+git commit -m "Changes done in File A."
+git revert ed572e5a73d0fb56c380aa23a44fa18a24407f49
+git branch feature1
+git branch feature2
+git branch -d feature2
+git checkout feature1
+touch C.txt
+start C.txt
+git add .
+git commit -m "File C added."
+git checkout master
+touch C.txt
+start C.txt
+git add .
+git commit -m "File C added."
+git diff master feature1
+git merge feature1
+git checkout feature1
+mv C.txt D.txt
+git add .
+git commit -m "Created file D.txt"
+git checkout master
+git merge feature1
+git checkout -b feature2
+touch E.txt
+start E.txt
+git add .
+git commit -m "File E added."
+git checkout master
+git merge feature2
+git stash
+git stash apply
